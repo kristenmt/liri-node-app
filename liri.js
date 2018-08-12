@@ -8,6 +8,8 @@ var spotify = new Spotify(keys.spotify);
 var client = new Twitter(keys.twitter);
 var request = require("request");
 var fs = require("fs");
+var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+
 //log to check keys are pulled correctly
 console.log("got keys loaded");
 
@@ -61,7 +63,21 @@ var getSpotify = function(songName){
             }
         }
     })
-
+//function to run movie search
+var getMovie = function(movieName){
+    if (movieName === undefined){
+        movieName = "Gone With the Wind";
+    }
+    request(movieName, function(error, response, body){
+        if (!error && response.statusCode === 200){
+            var jsonData = JSON.parse(body);
+            console.log("Title: " + jsonData.Title);
+            console.log("Year: " + jsonData.Year);
+            
+            
+        }
+    }) 
+}
     // `my-tweets`
 
     // `spotify-this-song`

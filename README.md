@@ -13,7 +13,6 @@
 <p>The "my-tweets" command will display the last 20 tweets from my twitter account, as well as when they were created. The "spotify-this-song <song name>" command will utilize the Spotify API to display the artist(s), song name, preview link of the song from Spotify, and the album name the song was featured in. If the user does not enter a song name, the command will default to "The Sign" by Ace of Base. The "movie-this" command uses OMDB's API to return information about the movie the user inputs ("movie-this <movie name>"), including title, year released, IMDB and Rotten Tomatoes Rating (if applicable), short plot, and more. If no movie name is entered in by the user, the return will default to "Mr. Nobody". Finally, "do-what-it-says" utilizes the "fs" node package to take text in the random.txt file to call LIRI's "spotify-this-song" command. It will display the song "Stairway to Heaven".</p>
 
 <p>To run this app, user will need to supply his/her own .env file with its own API keys.</p>
-
 <br>
 <h4>my-tweets</h4>
 <br>

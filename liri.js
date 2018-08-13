@@ -59,7 +59,7 @@ var getTweets = function () {
     client.get("statuses/user_timeline", params, function (error, tweets, response) {
         if (!error) {
             for (var i = 0; i < tweets.length; i++) {
-                console.log("_____________________");
+                console.log("---------------------------------------------------");
                 console.log(tweets[i].created_at);
                 console.log(tweets[i].text);
 
@@ -71,7 +71,7 @@ var getTweets = function () {
     //function to run movie search
     var getMovie = function (y) {
         var movieName = y;
-        var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+        var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&tomatoes=true&apikey=trilogy";
 
         if (movieName === undefined) {
             movieName = "Mr. Nobody";
@@ -81,6 +81,13 @@ var getTweets = function () {
                 var jsonData = JSON.parse(body);
                 console.log("Title: " + jsonData.Title);
                 console.log("Year: " + jsonData.Year);
+                console.log("IMDB Rating: " + jsonData.imdbRating);
+                console.log("Rotten Tomatoes Rating: " + jsonData.tomatoRating);
+                console.log("Produced in: " + jsonData.Country);
+                console.log("Language: " + jsonData.Language);
+                console.log("Plot: " + jsonData.Plot);
+                console.log("Actors/Actresses: " + jsonData.Actors);
+            
             }
         })
     };

@@ -22,13 +22,14 @@ var getBandName = function (artist) {
 var getSpotify = function (songName) {
     //if there's an error
     if (songName === undefined) {
-        songName = "Not a song";
+        songName = "The Sign";
     }
     //define the spotify search items
     spotify.search(
         {
             type: "track",
-            query: songName
+            query: songName,
+            limit: 1
         },
         //function for spotify search
         function (err, data) {

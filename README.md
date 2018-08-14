@@ -21,14 +21,17 @@
 <br>
 <h4>spotify-this-song</h4>
 <br>
+
 ![App Image](images/liri-spotify.png)
 <br>
 <h4>movie-this</h4>
 <br>
+
 ![App Image](images/liri-movie.png)
 <br>
 <h4>do-what-it-says</h4>
 <br>
+
 ![App Image](images/liri-do-what.png)
 <br>
 
